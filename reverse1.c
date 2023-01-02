@@ -1,18 +1,16 @@
-# include <stdio.h>
-  
-
-void reverse(char *str)
-{
-   if (*str)
-   {
-       reverse(str+1);
-       printf("%c", *str);
-   }
+#include<stdio.h>
+long int multiplyNumbers(int n);
+int main() {
+    int n;
+    printf("Enter a positive integer: ");
+    scanf("%d",&n);
+    printf("Factorial of %d = %ld", n, multiplyNumbers(n));
+    return 0;
 }
-  
-int main()
-{
-   char a[] = "Geeks for Geeks";
-   reverse(a);
-   return 0;
+
+long int multiplyNumbers(int n) {
+    if (n>=1)
+        return n*multiplyNumbers(n-1);
+    else
+        return 1;
 }
