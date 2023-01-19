@@ -1,19 +1,25 @@
 #include<iostream>
-#include<string>
 using namespace std;
 
-class myclass
+class student
 {
 	public:
-		int a;
-		string str;
+	string name;
+	int marks;
+	
+	void hello()
+	{
+		cout<<"hello\n";
+	}
 };
+
 int main()
 {
-	myclass obj; //create a object of my class
-	obj.a=10;
-	obj.str="hello";
-	cout<<obj.a;
-	cout<<obj.str;
+	
+student obj1;
+obj1.name="kajal";
+obj1.marks=45;
+obj1.hello();
+  cout << obj1.name<< " " << obj1.marks<<endl;
 	return 0;
 }
